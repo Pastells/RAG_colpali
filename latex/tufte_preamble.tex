@@ -1,0 +1,124 @@
+\usepackage{amssymb,amsmath,amsthm}
+\usepackage{bbm}
+\usepackage{xifthen}
+\usepackage{natbib}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{mdframed}
+\usepackage{graphicx} 
+\usepackage{accents}
+\usepackage{booktabs}
+\usepackage{nicefrac}
+\usepackage{tabu} %
+\usepackage{caption}
+\usepackage{cite}
+\usepackage{enumitem}
+\usepackage{cancel}
+\usepackage{tcolorbox}
+\usepackage{soul} %
+
+\usepackage{etoolbox}
+\appto\appendix{\addtocontents{toc}{\protect\setcounter{tocdepth}{1}}}
+\appto\listoffigures{\addtocontents{lof}{\protect\setcounter{tocdepth}{1}}}
+\appto\listoftables{\addtocontents{lot}{\protect\setcounter{tocdepth}{1}}}
+
+
+\usepackage[ruled,linesnumbered]{algorithm2e}
+\SetAlgorithmName{Pseudocode}{pscode}{List of Pseudocodes}
+
+\newcommand{\dt}{{\Delta{t}}}
+
+\setcounter{secnumdepth}{3} %
+
+\setlength{\emergencystretch}{3em}  %
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+\def\subsubsection{\subsection}
+
+\DeclareRobustCommand{\[}{\begin{equation}}
+\DeclareRobustCommand{\]}{\end{equation}}
+
+\let\Tuftemarginnote\marginnote
+\let\marginnote\relax
+\usepackage{marginnote}
+\let\MarginNote\marginnote
+\let\marginnote\Tuftemarginnote
+
+
+
+\def\mathnote#1{%
+  \tag*{\rlap{\hspace\marginparsep{\parbox[t]{\marginparwidth}{\footnotesize#1}}}}%
+}
+\def\mathnotes#1{%
+  \tag*{\rlap{\hspace\marginparsep\smash{\parbox[t]{\marginparwidth}{\footnotesize#1}}}}%
+}
+\def\mathnoteps#1{%
+  \tag*{\rlap{\hspace\marginparsep{\parbox[t]{\marginparwidth}{\footnotesize#1}}}}%
+}
+
+
+\usepackage[hyperpageref]{backref}
+\definecolor{mydarkblue}{rgb}{0,0.08,0.45}
+\hypersetup{ %
+    colorlinks=true,
+    linkcolor=mydarkblue,
+    citecolor=mydarkblue,
+    filecolor=mydarkblue,
+    urlcolor=mydarkblue,
+    pdfview=FitH,
+}
+
+\renewcommand\backrefxxx[3]{%
+  \hyperlink{page.#1}{$\uparrow$#1}%
+}
+
+
+\newcommand{\half}{\nicefrac{1}{2}}
+\newcommand{\1}{\mathbbm{1}}
+\DeclareMathOperator*{\argmin}{argmin}
+\DeclareMathOperator*{\argmax}{argmax}
+\newcommand{\x}{\times}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\E}{\mathop{\mathbb{E}}}
+\renewcommand{\bar}{\overline}
+\renewcommand{\epsilon}{\varepsilon}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\nullset}{\emptyset}
+\newcommand{\set}[1]{\{#1\}}
+
+\newcommand{\flowto}[1]{\overset{#1}{\hookrightarrow} }
+\newcommand{\goto}[1]{\overset{#1}{\longrightarrow} }
+\newcommand{\vtxo}{v_t^{[x_0]}}
+\newcommand{\vxo}{v^{[x_0]}}
+\newcommand{\Tab}[2]{v^{[#1,#2]}}
+\newcommand{\rflow}{\mathrm{RunFlow}}
+
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cD}{\mathcal{D}}
+\newcommand{\cZ}{\mathcal{Z}}
+\newcommand{\cX}{\mathcal{X}}
+\newcommand{\cY}{\mathcal{Y}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cN}{\mathcal{N}}
+\newcommand{\cH}{\mathcal{H}}
+\renewcommand{\hat}{\widehat}
+\newcommand{\wt}{\widetilde}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{remark}{Remark}
+\newtheorem{theorem}{Theorem}
+\newtheorem{claim}{Claim}
+\newtheorem{definition}{Definition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{problem}{Problem}
+\newtheorem{fact}{Fact}
+
+\usepackage{silence}
+\WarningFilter*{latex}{Marginpar on page \thepage\space moved}
+\WarningFilter*{caption}{The option `hypcap=true' will be ignored}
