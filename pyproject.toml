@@ -1,0 +1,37 @@
+[project]
+name = "rag"
+version = "0.1.0"
+description = "RAG demo with ColPali"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "accelerate>=1.2.1",
+    "bitsandbytes>=0.45.0",
+    "black>=24.10.0",
+    "colpali-engine>=0.3.2,<0.4.0",
+    "einops>=0.8.0",
+    "google-generativeai==0.8.3",
+    "huggingface-hub>=0.27.0",
+    "ipywidgets>=8.1.5",
+    "isort>=5.13.2",
+    "jupyterlab-code-formatter==2.2.1",
+    "jupyterlab-lsp>=5.1.0",
+    "jupyterlab-vim>=4.1.4",
+    "matplotlib>=3.10.0",
+    "numpy>=1.26.4",
+    "pdf2image>=1.17.0",
+    "peft>=0.11.1",
+    "pillow==10.4.0",
+    "pypdf==5.0.1",
+    "pyvespa>=0.51.0",
+    "ruff>=0.8.5",
+    "seaborn>=0.13.2",
+    "torch>=2.5.1",
+    "transformers",
+    "vespacli>=8.453.24",
+    "vidore-benchmark==4.0.0",
+    "wandb>=0.19.1",
+]
+
+[tool.uv.sources]
+transformers = { git = "https://github.com/huggingface/transformers.git" }
